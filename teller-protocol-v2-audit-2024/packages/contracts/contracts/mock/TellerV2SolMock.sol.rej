@@ -1,0 +1,10 @@
+diff a/teller-protocol-v2-audit-2024/packages/contracts/contracts/mock/TellerV2SolMock.sol b/teller-protocol-v2-audit-2024/packages/contracts/contracts/mock/TellerV2SolMock.sol	(rejected hunks)
+@@ -193,6 +193,8 @@ ILoanRepaymentCallbacks
+         );
+     }
+ 
++ 
++
+     /*
+      * @notice Calculates the minimum payment amount due for a loan.
+      * @param _bidId The id of the loan bid to get the payment amount for.

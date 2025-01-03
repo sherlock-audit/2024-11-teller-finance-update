@@ -1,0 +1,19 @@
+diff a/teller-protocol-v2-audit-2024/packages/contracts/contracts/LenderCommitmentForwarder/extensions/LenderCommitmentGroup/LenderCommitmentGroupShares.sol b/teller-protocol-v2-audit-2024/packages/contracts/contracts/LenderCommitmentForwarder/extensions/LenderCommitmentGroup/LenderCommitmentGroupShares.sol	(rejected hunks)
+@@ -63,11 +63,14 @@ contract LenderCommitmentGroupShares is ERC20, Ownable {
+         uint256 amount
+     ) internal override {
+ 
++        if (amount > 0) {
++               //reset prepared   
++            poolSharesPreparedToWithdrawForLender[from] = 0;
++            poolSharesPreparedTimestamp[from] =  block.timestamp;
+ 
+-         //reset prepared   
+-        poolSharesPreparedToWithdrawForLender[from] = 0;
+-        poolSharesPreparedTimestamp[from] =  block.timestamp;
++        }
+ 
++      
+     }
+ 
+ 
